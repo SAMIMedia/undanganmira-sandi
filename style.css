@@ -1,0 +1,279 @@
+.welcome-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  background-image: url('img/foto9.jpg'); /* backgrond cover undangan */
+  background-size: cover;       /* biar menutupi seluruh layar */
+  background-position: center;  /* posisikan tengah */
+  background-repeat: no-repeat; /* supaya tidak berulang */
+  /* opsi tambahan supaya tulisan tetap terbaca */
+  background-attachment: fixed; /* background tetap saat scroll */
+  color: #3e3e3e;
+}
+.welcome-screen h1 {
+  font-family: 'Lucida Handwriting', Times ;
+  font-size: 3rem;
+  color: #b45f06;
+  margin-bottom: 10px;
+}
+.welcome-screen h2 {
+  font-family: 'times', Times ;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+}
+.welcome-screen h3 {
+  font-family: 'Lucida Handwriting', Times ;
+  font-size: 2.5rem;
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+.welcome-screen p {
+  font-family: 'times', Times ;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.welcome-content {
+  text-align: center;
+  
+}
+
+.welcome-screen .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Reset dasar supaya tampilan konsisten di semua browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body dengan background gradasi dan font elegan */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8f1f1 0%, #d4c4c4 100%);
+  color: #3e3e3e;
+  min-height: 100vh;
+  padding: 40px;
+}
+.invitation-card,
+.gallery,
+.countdown {
+  margin-bottom: 40px;
+}
+
+
+
+
+/* Container utama kartu undangan (backgrond texs di dalam undangan bisa.gif) */
+.invitation-card {
+  background: url('img/backgrond.gif');
+  width: 100%;
+  max-width: 600px;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek dekoratif bunga atau pattern di pojok */
+.invitation-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: url(https://www.transparenttextures.com/patterns/flowers.png) no-repeat center center;
+  background-size: contain;
+  opacity: 0.15;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Judul utama undangan */
+.invitation-card h1 {
+  font-family: 'Lucida Handwriting', Times ;
+  font-size: 2rem;
+  color: #b45f06;
+  margin-bottom: 10px;
+}
+
+/* Nama pengantin */
+.invitation-card h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #5c3a00;
+  letter-spacing: 1.5px;
+}
+
+/* Judul utama undangan */
+.invitation-card h3 {
+  font-family: 'Lucida Handwriting', Times ;
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 5px; 
+}
+
+/* Teks deskripsi undangan */
+.invitation-card p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Tombol utama untuk lihat detail atau RSVP */
+.btn {
+  display: inline-block;
+  background-color: #b45f06;
+  color: white;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(180, 95, 6, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Efek hover tombol */
+.btn:hover {
+  background-color: #8a4600;
+  transform: scale(1.05);
+}
+
+/* Section detail undangan, yang muncul saat klik tombol */
+.detail {
+  margin-top: 30px;
+  background-color: #fff3e2;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(180, 95, 6, 0.2);
+  color: #5c3a00;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Link lokasi */
+.detail a {
+  color: #b45f06;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+.detail a:hover {
+  color: #8a4600;
+}
+
+/* Responsive untuk tampilan mobile */
+@media (max-width: 480px) {
+  .invitation-card {
+    padding: 25px 15px;
+  }
+
+  .invitation-card h1 {
+    font-size: 2.2rem;
+  }
+
+  .invitation-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+.countdown {
+  margin-top: 30px;
+  padding: 25px 20px;
+  background-color: #fff3e2;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(180, 95, 6, 0.2);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#btn-music-toggle {
+  margin-top: 20px;
+}
+.gallery-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.gallery img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+body {
+  background-image: url('img/foto2.jpg'); /* backgrond isi undangan  */
+  background-size: cover;       /* biar menutupi seluruh layar */
+  background-position: center;  /* posisikan tengah */
+  background-repeat: no-repeat; /* supaya tidak berulang */
+  /* opsi tambahan supaya tulisan tetap terbaca */
+  background-attachment: fixed; /* background tetap saat scroll */
+  color: #3e3e3e;
+}
+.cover-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cover-title .date {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.recipient-info {
+  text-align: center;
+  margin-top: 30px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.rsvp-section {
+  background: #fffdf7;
+  padding: 40px 20px;
+  margin: 60px auto;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
